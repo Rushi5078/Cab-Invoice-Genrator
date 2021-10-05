@@ -17,6 +17,15 @@ public class CabInvoiceGenerator {
 			return totalFare;
 		  }
 	 }
+	public double calculateTotalFare(Ride [] rides)
+	{
+		double totalFare = 0;
+		for(Ride ride: rides)
+		    {
+			 totalFare = totalFare + this.calculateFare(ride.distance , ride.time);
+			}
+		return totalFare;
+    }
 
 }
 
